@@ -4,7 +4,7 @@
 
 @extends('layouts.main')
 
-@include('layouts.navbar-before')
+@include('layouts.navbar')
 
 <div></div>
 @section('title', 'Landing Page')
@@ -21,7 +21,9 @@
     <div class="col-md-6 text-start mt-n5"> 
         <h3>Kesulitan <span>Belajar?</span></h3>
         <h1 class="fw-bold">Gabung <span>Kelas</span> <br> <span>Online</span> Aja!</h1>
-        <a href="#" class="btn btn-cta mt-2">Gabung Sekarang</a>
+        @guest
+        <a href="{{ route('register') }}" class="btn btn-cta mt-2">Gabung Sekarang</a>
+        @endguest
     </div>
   </div>
 </div>
@@ -64,7 +66,7 @@
                 <img src="{{ asset('images/course.jpg') }}" alt="Paket SIPAS" class="img-fluid mb-3 package-image rounded">
                 <h3 class="fw-semibold">Paket SIPAS</h3>
                 <p class="price">Rp. 199.000 <br><span class="text-muted"><del>Rp. 220.000</del></span> / Semester</p>
-                <a href="#" class="btn btn-primary mt-2">Daftar Sekarang</a> 
+                <a href="#" class="btn btn-primary mt-2">Lihat Paket</a> 
             </div>
         </div>
         <div class="col-md-6">
@@ -72,32 +74,31 @@
                 <img src="{{ asset('images/course1.jpg') }}" alt="Paket Custom" class="img-fluid mb-3 package-image rounded">
                 <h3 class="fw-semibold">Paket Custom</h3>
                 <p class="price">Rp. 59.000 <br><span class="text-muted"><del>Rp. 79.000</del></span> / Mata Kuliah</p>
-                <a href="#" class="btn btn-primary mt-2">Daftar Sekarang</a> 
+                <a href="#" class="btn btn-primary mt-2">Lihat Paket</a> 
             </div>
         </div>
     </div>
 </div>
 
-  
 
 <!-- About Section -->
 <div class="about-section rounded mt-5 ms-5 me-5" id="tentang-bimbel">
-    <div style="border: 3px solid white; padding: 20px; border-radius: 10px;">
-        <h2>Tentang Bimbel</h2>
-        <p>Kelas Online hadir sejak pertengahan tahun 2020 dalam membantu mahasiswa UT menjalani perkuliahan untuk memahami materi. Kami menyediakan berbagai paket kelas yang dirancang khusus untuk memenuhi kebutuhan belajar mahasiswa, dengan metode pengajaran yang interaktif dan mudah dipahami. Setiap sesi diajarkan oleh pengajar yang berpengalaman di bidangnya, sehingga peserta dapat belajar dengan efektif. Selain itu, kami juga menyediakan akses ke berbagai sumber belajar digital dan forum diskusi untuk mendukung proses belajar. Dengan mengikuti kelas online ini, mahasiswa diharapkan dapat meningkatkan pemahaman mereka terhadap materi kuliah dan mencapai tujuan akademis mereka dengan lebih baik.</p>
-    </div>
+  <div style="border: 3px solid white; padding: 20px; border-radius: 10px;">
+      <h2>Tentang Bimbel</h2>
+      <p>Kelas Online hadir sejak pertengahan tahun 2020 dalam membantu mahasiswa UT menjalani perkuliahan untuk memahami materi. Kami menyediakan berbagai paket kelas yang dirancang khusus untuk memenuhi kebutuhan belajar mahasiswa, dengan metode pengajaran yang interaktif dan mudah dipahami. Setiap sesi diajarkan oleh pengajar yang berpengalaman di bidangnya, sehingga peserta dapat belajar dengan efektif. Selain itu, kami juga menyediakan akses ke berbagai sumber belajar digital dan forum diskusi untuk mendukung proses belajar. Dengan mengikuti kelas online ini, mahasiswa diharapkan dapat meningkatkan pemahaman mereka terhadap materi kuliah dan mencapai tujuan akademis mereka dengan lebih baik.</p>
+  </div>
 </div>
-
 
 <div class="container py-5">
-    <div class="row justify-content-center text-center">
-        <img src="{{ asset('images/logo.png') }}" alt="Bimbel Logo" class="img-fluid" style="max-width: 500px;">
-        <p class="mt-3">Terdaftar sebagai Badan Hukum sah di Kemenkumham 
-            RI dengan sertifikat nomor AHU-041304.AH.01.30.Tahun 2024. 
-            Bimbingan belajar (bimbel) Kelas Online hadir sebagai solusimu untuk 
-            membantu memahami materi berbagai mata kuliah yang awalnya terlihat susah, menjadi terasa lebih mudah!</p>
-    </div>
+  <div class="row justify-content-center text-center">
+      <img src="{{ asset('images/logo.png') }}" alt="Bimbel Logo" class="img-fluid" style="max-width: 500px;">
+      <p class="mt-3">Terdaftar sebagai Badan Hukum sah di Kemenkumham 
+          RI dengan sertifikat nomor AHU-041304.AH.01.30.Tahun 2024. 
+          Bimbingan belajar (bimbel) Kelas Online hadir sebagai solusimu untuk 
+          membantu memahami materi berbagai mata kuliah yang awalnya terlihat susah, menjadi terasa lebih mudah!</p>
+  </div>
 </div>
 
+@include('layouts.footer')
 
 @endsection

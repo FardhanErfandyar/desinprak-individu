@@ -23,7 +23,7 @@ class AuthController extends Controller
 
         // Coba login
         if (Auth::attempt($request->only('email', 'password'))) {
-            return redirect()->intended('dashboard')->with('success', 'Selamat datang!');
+            return redirect()->intended('/')->with('success', 'Selamat datang!');
         }
 
         throw ValidationException::withMessages([
@@ -34,6 +34,6 @@ class AuthController extends Controller
     public function logout(Request $request)
     {
         Auth::logout();
-        return redirect()->route('login')->with('success', 'Anda telah berhasil logout.');
+        return redirect('/')->with('success', 'Anda telah berhasil logout.');
     }
 }
