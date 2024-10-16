@@ -6,7 +6,7 @@ use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('landing'); // Memanggil view landing
+    return view('landing'); 
 });
 
 
@@ -19,4 +19,10 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/class', function () {
+        return view('class'); 
+    })->name('class');
 });

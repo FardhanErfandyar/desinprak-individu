@@ -1,5 +1,5 @@
 <!-- Footer Section -->
-<footer class="py-4 mx-auto mt-5">
+<footer class="py-4 mx-auto mt-5 gradient">
     <div class="container">
         <div class="row mt-5">
             <!-- Kolom Pertama: Logo -->
@@ -34,3 +34,10 @@
         </div>
     </div>
 </footer>
+
+
+<style>
+    .gradient{
+        background: linear-gradient(to right,#F18821,#FFA62F);
+    }
+</style>

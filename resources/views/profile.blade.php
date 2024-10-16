@@ -9,9 +9,9 @@
           <div class="card">
             <div class="rounded-top text-white d-flex flex-row gradient-background" style="height:200px;">
               <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
+                <img src="{{ asset('images/profile.jpg') }}"
                   alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
-                  style="width: 150px; z-index: 1">
+                  style="width: 150px; height:150px; z-index: 1">
                   <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-warning" data-mdb-ripple-color="dark" style="z-index: 1; color: #F18821;">
                     Edit profile
                   </button>

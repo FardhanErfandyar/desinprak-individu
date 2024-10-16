@@ -26,8 +26,11 @@
 
       @auth
       <li class="nav-item">
-        <a class="nav-link fw-semibold" id=""href="#">Kelas</a>
-      </li>
+        <a class="nav-link fw-semibold {{ request()->routeIs('class') ? 'active-link' : '' }}" href="{{ route('class') }}">
+            Kelas
+        </a>
+    </li>
+    
       @endauth
 
       </ul>
@@ -40,7 +43,7 @@
       </form>
 
       @guest
-          <a href="/login" class="btn btn-primary mb-3 rounded align-self-center">Login</a>
+          <a href="/login" class="btn btn-primary btn-lg mb-3 rounded align-self-center btn-login">Login</a>
       @endguest
 
       @auth
