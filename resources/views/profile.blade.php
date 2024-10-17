@@ -25,11 +25,11 @@
               <div class="d-flex justify-content-end text-center py-1 text-body">
                 <div>
                   <p class="mb-1 h5">8</p>
-                  <p class="small text-muted mb-0">Mata Kuliah Diambil</p>
+                  <p class="small text-muted mb-0">Kelas</p>
                 </div>
                 <div class="px-3">
                   <p class="mb-1 h5">4</p>
-                  <p class="small text-muted mb-0">Mata Kuliah Diselesaikan</p>
+                  <p class="small text-muted mb-0">Kuis Diselesaikan</p>
                 </div>
                 <div>
                   <p class="mb-1 h5">180</p>

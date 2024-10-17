@@ -37,9 +37,9 @@
     </div>
 
     <!-- Search Bar and Login/Profile Section -->
-    <div class="d-flex mt-3"> 
-      <form class="d-flex me-2">
-          <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Search" style="max-width: 200px;">
+    <div class="d-flex mt-2"> 
+      <form class="d-flex me-3 mt-3">
+          <input class="form-control" type="search" placeholder="Cari" aria-label="Search" style="max-width: 200px;">
       </form>
 
       @guest
@@ -47,19 +47,39 @@
       @endguest
 
       @auth
-          <div class="nav-item dropdown profile-section">
-              <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img class="rounded-circle me-2" 
-                      src="{{ asset('images/profile.jpg') }}" 
-                      width="32" height="32" alt="Profile Picture">
 
-                  <span class="fw-semibold">{{ Auth::user()->name }}</span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="{{ route('profile') }}">Profile</a></li>
-                  <li><button class="dropdown-item" data-bs-target="#signOutModal" data-bs-toggle="modal">Sign Out</button></li>
-              </ul>
-          </div>
+      <div class="d-flex align-items-center nav-item py-2 mb-3">
+        <!-- Notifications Icon with Badge -->
+        <a class="nav-link notification-container me-3" href="{{ route('inbox') }}">
+            <div class="notification-icon position-relative px-3 py-2">
+                @if (Request::route()->getName() == 'inbox')
+                    <img src="{{ asset('images/filled_bells.svg') }}" alt="Notifications" style="width: 24px; height: 24px;">
+                @else
+                    <img src="{{ asset('images/new_bells.svg') }}" alt="Notifications" style="width: 24px; height: 24px;">
+                @endif
+                    <span class="notification-badge">
+                    </span>
+            </div>
+        </a>
+    
+        <!-- Profile Dropdown -->
+        <div class="nav-item dropdown profile-section">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <!-- User Profile Picture -->
+                <img class="rounded-circle me-2" 
+                     src="{{ asset('images/profile.jpg') }}"
+                     width="32" height="32" alt="Profile Picture">
+    
+                <!-- Username -->
+                <span class="fw-semibold">{{ Auth::user()->name }}</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="{{ route('profile') }}">Profile</a></li>
+                <li><button class="dropdown-item" data-bs-target="#signOutModal" data-bs-toggle="modal">Sign Out</button></li>
+            </ul>
+        </div>
+    </div>
+    
       @endauth
     </div>
 

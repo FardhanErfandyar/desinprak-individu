@@ -9,7 +9,7 @@ document.addEventListener('scroll', function() {
         const sectionHeight = section.clientHeight; 
 
        
-        const sectionOffset = sectionHeight * 0.2;
+        const sectionOffset = sectionHeight * 0.3;
 
         
         if (scrollPos >= sectionTop - sectionOffset && scrollPos < sectionTop + sectionHeight) {

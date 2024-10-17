@@ -26,3 +26,9 @@ Route::middleware(['auth'])->group(function () {
         return view('class'); 
     })->name('class');
 });
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/inbox', function () {
+        return view('inbox'); 
+    })->name('inbox');
+});

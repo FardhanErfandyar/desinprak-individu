@@ -19,7 +19,9 @@
 }
 
 .form-control {
-    border-radius: 15px; 
+    border-radius: 12px; 
+    max-height: 42px;
+    color: #F18821;
 }
 
 .fw-semibold {
@@ -44,7 +46,54 @@
   color: white; 
 }
 
+.profile-section {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 10px; 
+  min-width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease;
+}
 
+.profile-section:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+}
+
+.notification-container {
+  background-color: #ffffff; 
+  border-radius: 10px; 
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); 
+  padding: 5px; 
+  display: inline-block;
+  transition: box-shadow 0.3s ease;
+}
+
+.notification-container:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+}
+
+.notification-icon {
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 1px;
+  right: 10px;
+  background: #164444;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-size: 0.9rem;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* LANDING */
 
