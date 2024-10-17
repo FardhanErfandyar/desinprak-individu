@@ -43,7 +43,7 @@
       </form>
 
       @guest
-          <a href="/login" class="btn btn-primary btn-lg mb-3 rounded align-self-center btn-login">Login</a>
+          <a href="/login" class="btn btn-primary btn-lg mb-2 rounded align-self-center btn-login">Login</a>
       @endguest
 
       @auth
